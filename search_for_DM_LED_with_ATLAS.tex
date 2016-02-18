@@ -1,0 +1,119 @@
+\documentclass[10pt,twoside,cucitura,classica,english,openany]{toptesi}
+
+\usepackage{hyperref}
+\hypersetup{%
+  pdfpagemode={UseOutlines},
+  bookmarksopen,
+  pdfstartview={FitH},
+  colorlinks,
+  linkcolor={blue},
+  citecolor={red},
+  urlcolor={blue}
+}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage{layaureo}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{placeins}
+\usepackage[titletoc]{appendix}
+\usepackage[font=footnotesize]{caption}
+\usepackage[font=footnotesize]{subcaption}
+\usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+\bibliography{bibliography}
+
+\ateneo{Stockholm University}
+\facolta{Department of Physics}
+
+\titolo{Search for in Mono-jet Final States with the ATLAS Experiment}
+
+\TesiDiLaurea{Licensiate Thesis}
+
+\CorsoDiLaureaIn{Doctoral Studies in }
+\corsodilaurea{Physics}
+
+\CandidateName{Candidate:}
+\candidato{Gabriele \textsc{Bertoli}}
+\AdvisorName{Advisor:}
+\relatore{dott.~Christophe \textsc{Clement}}
+\CoAdvisorName{Co-Supervisor}
+\secondorelatore{dott.~David \textsc{Milstead}}
+\sedutadilaurea{December 2015}
+\sedutadilaurea{\textsc{December 12,} 2015}
+\logosede{logo}
+
+\newtheorem{osservazione}{Osservazione}
+\ExtendCaptions{english}{Abstract}{Acknowledgments}
+
+\graphicspath{{images/}}
+
+\begin{document}\errorcontextlines=9
+
+\numberwithin{equation}{section}
+
+\input{command}
+
+\english
+
+\cleardoublepage
+
+% \expandafter\ifx\csname StileTrieste\endcsname\relax
+\frontespizio
+% \else
+\paginavuota
+\begin{dedica}
+\end{dedica}
+% \tomo \fi
+
+\ringraziamenti
+
+\tablespagetrue\figurespagetrue \indici
+
+% \expandafter\ifx\csname StileTrieste\endcsname\relax \else
+\begin{citazioni}
+  \textit{Si sta,\\come d'autunno,\\sugli alberi,\\le foglie }
+
+  [\textsc{G.~Ungaretti}, Soldati]
+\end{citazioni}
+
+% \fi
+
+\chapter*{Introduction}
+\label{cha:intro}
+\input{introduction/intro.tex}
+
+\part{Theoretical Overview}
+
+\mainmatter
+
+\chapter{The Standard Model of Particle Physics}
+\label{cha:SM}
+\input{chapter_I/sm}
+
+\section{The hierarchy problem and naturalness}
+\label{sec:hier-probl-natur}
+\input{chapters/hier_probl_natur}
+
+
+\chapter{The Monojet signature}
+\label{cha:monojet-signature}
+
+\input{monojet_sig/motivation.tex}
+
+\section{Seraches for new physics with the monojet signature}
+\label{sec:seraches-new-physics}
+\input{chapters/searches_new_physics}
+
+\begin{appendices}
+  \chapter{Some title}
+\end{appendices}
+
+\addcontentsline{toc}{chapter}{\bibname} \printbibliography
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
