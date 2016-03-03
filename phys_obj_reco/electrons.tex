@@ -1,12 +1,54 @@
 Electrons are identified in the central part of the ATLAS detector
 ($|\eta| < 2.47$) by an energy deposit in the electromagnetic calorimeter and an
-associated track in the inner detector. Electron identification efficiencies are
-measured in $pp$ collisions data and compared to efficiencies measured in $\zee$
-simulations. Signal electrons are identified by different sets of
-likelihood-based criteria with $\sim 95\%, \sim 90\%$ and $\sim 80\%$ efficiency
-for electrons with $\pt \sim 40~$GeV, the different criteria are referred to as
-\emph{loose}, \emph{medium} and \emph{tight} operating points
-respectively\cite{ATL-EL-IDENT}.
+associated track in the inner detector. Signal electrons are defined as prompt
+electrons coming from the decay of a $W, Z$ boson or a top quark while
+background electrons come from hadronic jets, photon conversion and
+semi-leptonic heavy flavor hadron decay. A likelihood discriminator is formed
+using the shower shape in the EM calorimeter, the track-cluster matching, some
+of the track quality distributions from signal and background simulation and
+cuts on the number of hits in the ID. Cuts that depends on $|\eta|$ and $\et$ on
+the likelihood estimator allow to distinguish between signal and background
+electrons.
+
+Electron identification efficiencies are measured in $pp$ collisions data and
+compared to efficiencies measured in $\zee$ simulations. Signal electrons can
+furthermore be selected with different sets of cuts for the likelihood-based
+criteria with $\sim 95\%, \sim 90\%$ and $\sim 80\%$ efficiency for electrons
+with $\pt \sim 40~$GeV. The different criteria are referred to as \emph{loose},
+\emph{medium} and \emph{tight} operating points respectively\cite{ATL-EL-IDENT}
+where, for example, a tight criterion lead to a higher purity of signal
+electrons.
+
+In this analysis, the \emph{baseline electrons} are selected requiring a
+transverse energy $\et > 20$~GeV, $|\eta| < 2.47$, to satisfy the \emph{loose}
+likelihood selection criteria. Furthermore, it is required that no dead EM
+calorimeter front-end board (FEB) or high voltage (HV) channels in the
+calorimeter cluster are present and that the baseline electron passes the
+OR. The baseline electron criteria is used to veto electrons used in the muon
+control regions and the signal region definition. In addition to all the
+baseline criteria, the \emph{good electron} definition requires the electrons to
+satisfy the \emph{tight} likelihood selection criteria, the electron track $d_0
+/ \sigma_{d0} < 5$~mm and $|z_0| < 0.5$~mm and the \emph{LooseTrackOnly}
+electron isolation criteria.
+
+\begin{table}[!th]
+  \centering
+  \begin{tabular}{cc}
+    \multicolumn{2}{c}{Electron Definition} \\
+    \hline \hline \\
+    \textbf{Baseline electron} & \textbf{Good electron} \\
+    \hline
+    $\et > 20$~GeV & \emph{baseline} \\
+    $|\eta| < 2.47$ & \emph{tight} \\
+    \emph{loose} & $d_0 / \sigma_{d0} < 5$~mm \\
+    No dead FEB in the EM calo cluster & $|z_0| < 0.5$~mm \\
+    No dead HV in the EM calor cluster & \emph{LooseTrackOnly} \\
+    passes the OR & \\
+    \hline \hline
+  \end{tabular}
+  \caption{Monojet electron definition}
+  \label{tab:ele_def}
+\end{table}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../search_for_DM_LED_with_ATLAS"
