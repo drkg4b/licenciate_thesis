@@ -14,12 +14,17 @@
 \usepackage[T1]{fontenc}\usepackage{lmodern}
 \usepackage{layaureo}
 \usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{placeins}
 \usepackage[titletoc]{appendix}
 \usepackage[font=footnotesize]{caption}
 \usepackage[font=footnotesize]{subcaption}
 \usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+
+% To change the bullet type of itemize environment
+\def\labelitemi{--}
+
 \addbibresource{references.bib}
 
 \bibliography{bibliography}
@@ -99,40 +104,45 @@
 
 \input{standard_model/higgs}
 
-\section{The hierarchy problem and naturalness}
+\section{The Hierarchy Problem and Naturalness}
 \label{sec:hier-probl-natur}
 
 \input{standard_model/hier_probl_natur}
 
-\chapter{Experimental apparatus}
+\chapter{Experimental Apparatus}
 \label{cha:exper-appar}
 
-\section{The large hadron collider}
+\section{The Large Hadron Collider}
 \label{sec:large-hadr-coll}
 
 \input{exp_apparatus/lhc}
 
-\section{The ATLAS detector}
+\section{The ATLAS Detector}
 \label{sec:atlas-detector}
 
 \input{exp_apparatus/atlas}
 
-\subsection{The inner detector}
+\subsection{The Coordinate System}
+\label{sec:coordinate-system}
+
+\input{exp_apparatus/coordinate}
+
+\subsection{The Inner Detector}
 \label{sec:inner-detector}
 
 \input{exp_apparatus/inner_detector}
 
-\subsection{The calorimeter}
+\subsection{The Calorimeter}
 \label{sec:calorimeters}
 
 \input{exp_apparatus/calorimeters}
 
-\subsection{The muon spectrometer}
+\subsection{The Muon Spectrometer}
 \label{sec:muon-spectrometer}
 
 \input{exp_apparatus/muon_spectro}
 
-\subsection{The forward detectors}
+\subsection{The Forward Detectors}
 \label{sec:forward-detectors}
 
 \input{exp_apparatus/forward}
@@ -142,15 +152,15 @@
 
 \input{exp_apparatus/track_reco}
 
-\subsection{The trigger system}
+\subsection{The Trigger System}
 \label{sec:trigger-system}
 
 \input{exp_apparatus/trigger}
 
-\chapter{Physical objects reconstruction}
+\chapter{Physical Objects Reconstruction}
 \label{cha:phys-objects-reconst}
 
-\section{Lepton reconstruction and identification}
+\section{Lepton Reconstruction and Identification}
 \label{sec:lept-reconstr-ident}
 
 \input{phys_obj_reco/introduction}
@@ -160,7 +170,7 @@
 
 \input{phys_obj_reco/pv}
 
-\subsection{Overlap removal}
+\subsection{Overlap Removal}
 \label{sec:overlap-removal}
 
 \input{phys_obj_reco/or}
@@ -175,7 +185,7 @@
 
 \input{phys_obj_reco/jets}
 
-\subsection{Missing transverse energy}
+\subsection{Missing Transverse Energy}
 \label{sec:miss-transv-energy}
 
 \input{phys_obj_reco/met}
@@ -185,7 +195,7 @@
 
 \input{phys_obj_reco/muons}
 
-\chapter{The Monojet signature}
+\chapter{The Monojet Signature}
 \label{cha:monojet-signature}
 
 \section{Motivation}
