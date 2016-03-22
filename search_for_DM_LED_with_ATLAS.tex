@@ -18,9 +18,12 @@
 \usepackage{amssymb}
 \usepackage{placeins}
 \usepackage[titletoc]{appendix}
+\usepackage[acronym]{glossaries}
 \usepackage[font=footnotesize]{caption}
 \usepackage[font=footnotesize]{subcaption}
 \usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+
+\makeglossaries
 
 % To change the bullet type of itemize environment
 \def\labelitemi{--}
@@ -90,6 +93,8 @@
 \input{introduction/intro.tex}
 
 \mainmatter
+
+\input{acronyms}
 
 \chapter{Theoretical overview}
 \label{cha:theoretical-overview}
@@ -211,6 +216,8 @@
 \begin{appendices}
   \chapter{Some title}
 \end{appendices}
+
+\printglossaries
 
 \addcontentsline{toc}{chapter}{\bibname} \printbibliography
 \end{document}
