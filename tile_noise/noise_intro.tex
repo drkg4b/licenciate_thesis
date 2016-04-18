@@ -1,0 +1,13 @@
+TileCal periodically performs sets of recorded event (\emph{runs}) with no
+signal in the PMTs, called \emph{pedestal runs}; during these runs, each channel
+is read out using both, HG and LG for about 100000 events. These events are
+sampled every 25~ns in 7 samples as in normal physic runs and are normally
+distributes around a mean value called \emph{pedestal}. The \gls{rms} of the
+pedestal is defined as \emph{noise}. Pedestal runs are used to calculate
+different parameters that allow to describe the electronic noise called
+\emph{noise constants}. Two different sets of noise constants are computed:
+\emph{Digital Noise} (or \emph{Sample Noise}) and \emph{Cell Noise}.
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../search_for_DM_LED_with_ATLAS"
+%%% End:
