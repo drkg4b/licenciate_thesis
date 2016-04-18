@@ -1,0 +1,66 @@
+In most cases, cell noise is the combination of the pulse from the PMTs
+connected to a cell (as mentioned the E layer cells are connected to only one
+PMT). The digital noise from the PMTs is added quadratically and converted in
+MeV using the calibration constants, this results in four gain combinations:
+\gls{hghg}, \gls{lglg}, \gls{lghg} and \gls{hglg}.
+
+The cell noise is used in the baseline algorithm, the \emph{topological
+  clustering} algorithm~\cite{JetCluster}, for the identification of the energy
+deposits. The algorithm assumes that the noise in all the calorimeter cells is
+normally distributed with significance (the ratio between the deposited energy
+and the parameter $\sigma$ used to describe the cell noise) expressed in units
+of Gaussian sigmas. In the algorithm, cluster of cells called
+\emph{topoclusters}, are formed by testing the energy deposit in a cell for a
+significant incompatibility with a noise only hypothesis. The algorithm starts
+by finding the \emph{seed cells} with $E > 4 \sigma$ where $\sigma$ is the
+measured RMS of the energy distribution for every cell in the pedestal run. The
+second step is to add to the seeds neighbor cells that satisfy the
+$E > 2 \sigma$ condition. Finally an additional layer of cells with $E > 0$ is
+added to the perimeter of the cluster before applying the splitting algorithm to
+separate the topoclusters based on the local energy maxima.
+
+Figure~\ref{fig:non_gaussianity} shows a comparison between the cell noise and
+the fitted $\sigma$ parameter of a normal distribution. The ratio RMS / $\sigma$
+= 1 indicates a perfect agreement between the measured and the fitted amplitude
+distribution for a single Gaussian hypothesis; as can be seen, with an old model
+of \gls{lvps} (blue square) the ratio RMS / $\sigma$ can be larger thus
+worsening the performance of the topological clustering algorithm. For this
+reason a double Gaussian distribution is used to fit the energy distribution,
+the probability density function is defined as:
+\begin{equation}
+  \label{eq:71}
+  f_{2g} = \frac{1}{1 + R} \left( \frac{1}{\sqrt{2 \pi} \sigma_1} e^{-
+      \frac{x^2}{2 \sigma_1^2}} + \frac{R}{\sqrt{2 \pi} \sigma_2} e^{-
+      \frac{x^2}{2 \sigma_2^2}} \right)
+\end{equation}
+where $R$ is the relative normalization of the two Gaussians and
+$\sigma_1, \sigma_2$ and $R$ are independent parameters. These three are used to
+define the region $\sigma_{\text{eff}}(E)$ where the significance for the double
+Gaussian is the same as the one $\sigma$ region for a single Gaussian,
+i.e.
+$\int_{- \sigma_{\text{eff}}}^{\sigma_{\text{eff}}} f_{2g} =
+0.68$~\cite{TileReadiness}.
+In terms of $\sigma_{\text{eff}}$, for an energy deposit $E$, the significance
+can be expressed as:
+\begin{equation}
+  \label{eq:72}
+  \frac{E}{\sigma_{\text{eff}}(E)} = \sqrt{2}\ \text{Erf}^{- 1} \left( \frac{\sigma_1
+      \text{Erf} \left(\frac{E}{\sqrt{2 \sigma_1}} \right) + R \sigma_2 \text{Erf}
+    \left( \frac{E}{\sqrt{2 \sigma_2}} \right)}{\sigma_1 + R \sigma_2} \right)
+\end{equation}
+where Erf is the error function. Eq.~\eqref{eq:72} is the input to the
+clustering algorithm, moreover this definition allows to use the same unit to
+describe the noise for both the TileCal and LAr calorimeters.
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=.5\linewidth]{non_gaussianity}
+    \caption{Comparison between the TileCal electronic noise, measured as the
+      RMS of the reconstructed amplitude distribution in pedestal runs and the
+      $\sigma$ of the Gaussian fit of the distribution for the old and new LVPS.}
+    \label{fig:non_gaussianity}
+\end{figure}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../search_for_DM_LED_with_ATLAS"
+%%% End:
