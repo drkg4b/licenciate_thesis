@@ -1,18 +1,18 @@
 The excess transverse energy coming from pile-up jets is generally subtracted on
 average from the signal energy, however, due to localized fluctuations in the
-pile-up, some pile-up jet remains. The \gls{jvf} is a variable that uses
-information from the track associated to each jet to identify the origin vertex
-of each jet and reject it if not coming from a hard-scatter
-vertex~\cite{JVF}. The JVF can be regarded as a measure of the fraction of the
-jet energy associated with a primary vertex and is defined as:
+pile-up, some of it remains in the $\pt$ of the reconstructed jet. The \gls{jvf}
+is a variable that uses information from the track associated to each jet to
+identify the origin vertex of each jet and reject it if not coming from a
+hard-scatter vertex~\cite{JVF}. The JVF can be regarded as a measure of the
+fraction of the jet energy associated with a primary vertex and is defined as:
 \begin{equation}
   \label{eq:77}
   \mathrm{JVF} = \frac{\sum_k p_\mathrm{\, T}^\mathrm{\, trk_k}
     (\mathrm{PV_0})}{\sum_l p_\mathrm{\, T}^\mathrm{\, trk_l} (\mathrm{PV_0}) +
     \sum_{n \geq l} \sum_k p_\mathrm{\, T}^\mathrm{\, trk_l} (\mathrm{PV_n})}
 \end{equation}
-where PV$_0$ is the primary vertex and PV$_n$ with $n \geq 1$ is any other
-pile-up PV in the same bunch crossing.
+where PV$_0$ is the primary vertex and PV$_\mathrm{n}$ with $\mathrm{n} \geq 1$
+is any other pile-up PV in the same bunch crossing.
 
 Since the JVF denominator increases with the number of reconstructed PV, this
 introduces a pile-up dependence on the number of PV when minimal JVF criterion
@@ -46,11 +46,13 @@ The $\mathrm{R_{pT}}$ is defined as:
     (\mathrm{PV_0})}{\pt^{\mathrm{jet}}}
 \end{equation}
 where $\pt^{\mathrm{jet}}$ is the fully calibrated jet $\pt$. This variable is
-defined using tracks associated with the HS vertex, thus it is independent on
-the N$_{\mathrm{PV}}$~\cite{PileUpPerformance}.
+defined using tracks associated with the HS vertex, it is at first order
+independent on the N$_{\mathrm{PV}}$~\cite{PileUpPerformance}.
 
 The \gls{jvt} is constructed from the corrJVF and $\mathrm{R_{pT}}$ by forming a
-two dimensional likelihood
+two dimensional likelihood based on the k-nearest neighbor algorithm. Using the
+JVT algorithm, the HS jet efficiency is stable within 1\% up to 35 interactions
+per bunch crossing~\cite{JVT}.
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../search_for_DM_LED_with_ATLAS"
