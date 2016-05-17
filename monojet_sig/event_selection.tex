@@ -1,6 +1,52 @@
 The search is carried out in $pp$ collisions using the data collected by the
 ATLAS experiment during the 2015 Run II corresponding to a total integrated
-luminosity of 3.2 \ifb.
+luminosity of 3.2 \ifb. The signal region is defined by the following selection
+criteria:
+\begin{itemize}
+\item The HLT\_xe70 trigger was used in the whole 2015 dataset.
+\item In order to assure that the event originated from a $pp$ collision, a PV
+  with at least two associated tracks with $\pt > 0.4$~GeV is required.
+\item Events in which any jet fails the \emph{loose} jet cleaning criteria are
+  rejected. This suppress noise from non-collision background.
+\item The most energetic jet in the event (the \emph{leading jet}) must have
+  $\pt > 250~$GeV and $|\eta| < 2.4$. Moreover, in order to reject beam-induced
+  and cosmic particles background, the event is rejected if the leading jet
+  fails the \emph{tight} cleaning criteria.
+\item In order to suppress $Z (\rightarrow \ell \bar{\ell})$ + jets and
+  $W (\rightarrow \ell \nu)$ background, events with an identified electron of
+  $\pt > 20~$GeV or muon of $\pt > 10~$GeV are rejected.
+\item In order not to overlap with other analyses, events with more than four
+  jets are rejected, see Appendix~\ref{sec:jet-veto} for more details on this
+  selection.
+\item The $\met$ trigger can acquire multi-jet events in case of a
+  mis-reconstructed jet, since in these cases, usually, the missing transverse
+  momentum points in the direction of one of the jets, this background can be
+  suppressed by imposing a minimum azimuthal angle separation between the
+  missing transverse momentum and any jet of 0.4.
+\item The $\met$ trigger is fully efficient at 250~GeV, thus a $\met > 250~$GeV
+  requirement is imposed.
+\end{itemize}
+
+\begin{table}[!th]
+  \centering
+  \begin{tabular}{l}
+    \toprule
+    \multicolumn{1}{c}{Event Selection Criteria} \\
+    \midrule \midrule
+    HLT\_xe70 trigger \\
+    Primary Vertex \\
+    $\met > 250~$GeV \\
+    Leading jet with $\pt > 250~$GeV and $|\eta| < 2.4$ \\
+    At most 4 jets \\
+    $\Delta \phi (\mathrm{jets}, \vec{p}_{\mathrm{\, T}}^{\mathrm{\, miss}}) >
+    0.4$ \\
+    Jet quality requirements \\
+    No identified muon with $\pt > 10~$GeV or electron of $\pt > 20~$GeV \\
+    \bottomrule
+  \end{tabular}
+  \caption{Event selection criteria summary table.}
+  \label{tab:event_selection}
+\end{table}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../search_for_DM_LED_with_ATLAS"
