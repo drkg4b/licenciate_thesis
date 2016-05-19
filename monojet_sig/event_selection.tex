@@ -26,22 +26,34 @@ criteria:
 \item The $\met$ trigger is fully efficient at 250~GeV, thus a $\met > 250~$GeV
   requirement is imposed.
 \end{itemize}
+Inclusive (IM1--IM7) and exclusive (EM1--EM6) \glspl{sr} are defined in the
+monojet analysis with increasing $\met$ thresholds from 250~GeV to 700~GeV, see
+Table~\ref{tab:event_selection} for more details.
 
 \begin{table}[!th]
   \centering
-  \begin{tabular}{l}
+  % The @{} is to avoid extra horizontal space
+  \begin{tabular}{@{}l@{}c@{}c@{}c@{}c@{}c@{}c@{}c}
     \toprule
-    \multicolumn{1}{c}{Event Selection Criteria} \\
+    \multicolumn{8}{c}{Event Selection Criteria} \\
     \midrule \midrule
-    HLT\_xe70 trigger \\
-    Primary Vertex \\
-    $\met > 250~$GeV \\
-    Leading jet with $\pt > 250~$GeV and $|\eta| < 2.4$ \\
-    At most 4 jets \\
-    $\Delta \phi (\mathrm{jets}, \vec{p}_{\mathrm{\, T}}^{\mathrm{\, miss}}) >
-    0.4$ \\
-    Jet quality requirements \\
-    No identified muon with $\pt > 10~$GeV or electron of $\pt > 20~$GeV \\
+    \multicolumn{8}{l}{HLT\_xe70 trigger} \\
+    \multicolumn{8}{l}{Primary Vertex} \\
+    \multicolumn{8}{l}{$\met > 250~$GeV} \\
+    \multicolumn{8}{l}{Leading jet with $\pt > 250~$GeV and $|\eta| < 2.4$} \\
+    \multicolumn{8}{l}{At most 4 jets} \\
+    \multicolumn{8}{l}{$\Delta \phi (\mathrm{jets}, \vec{p}_{\mathrm{\,
+    T}}^{\mathrm{\, miss}}) > 0.4$} \\
+    \multicolumn{8}{l}{Jet quality requirements} \\
+    \multicolumn{8}{l}{No identified muon with $\pt > 10~$GeV or electron of
+    $\pt > 20~$GeV} \\
+    \midrule
+    Inclusive SRs & IM1 & IM2 & IM3 & IM4 & IM5 & IM6 & IM7 \\
+    $\met$~[GeV] & > 250 & > 300 & > 350 & > 400 & > 500 & > 600 & > 700 \\
+    \midrule
+    Exclusive SRs & EM1 & EM2 & EM3 & EM4 & EM5 & EM6 \\
+    $\met$~[GeV] & [250--300] & [300--350] & [350--400] & [400--500] &
+    [500--600] & [600--700] \\
     \bottomrule
   \end{tabular}
   \caption{Event selection criteria summary table.}
