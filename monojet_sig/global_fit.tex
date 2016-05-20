@@ -7,7 +7,72 @@ an MC based \emph{transfer factor} is used. This factor is a ratio of MC
 predictions thus most of the systematic uncertainties either cancel out or are
 significantly reduced. The extrapolation from one kinematic region to another
 can be itself source of uncertainties, to avoid this, the selection in terms of
-kinematic in the CRs and SRs is chosen to be the same.
+kinematic in the CRs and SRs is chosen to be the same. The expected
+contributions of a background process BG$_i$, which is extracted from a control
+region CR$_j$ dominated by background BG$_j$, to a signal region SR$_k$, is
+given by:
+\begin{equation}
+  \label{eq:83}
+  N_{\mathrm{\, BG}_i}^{\mathrm{\, SR}_k} = \frac{(N_\mathrm{\,
+      data}^{\mathrm{\, CR}_j} - N_\mathrm{\, other~BG,~MC}^{\mathrm{\,
+        CR}_j})}{N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j \mathrm{,~MC}}} \times
+  N^{\mathrm{\, SR}_k}_{\mathrm{\, BG}_i,~\mathrm{MC}}
+\end{equation}
+where $N_{\mathrm{\, BG}_i}^{\mathrm{\, SR}_k}$ is the predicted number of the
+background $i$ events in the $k$ signal region,
+$N_\mathrm{\, data}^{\mathrm{\, CR}_j}$ is the observed number of events in the
+$j$ control region, $N_\mathrm{\, other~BG,~MC}^{\mathrm{\, CR}_j}$ is the MC
+estimate of the background contamination coming from other processes in the
+given control region, $N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j \mathrm{,~MC}}$ is
+the MC prediction of the $j$ background in the $j$ control region and
+$N^{\mathrm{\, SR}_k}_{\mathrm{\, BG}_i,~\mathrm{MC}}$ is the number of the $i$
+background events predicted in MC simulation in the signal region. The ratio:
+\begin{equation}
+  \label{eq:84}
+  C_{\mathrm{BG}_i}^{\mathrm{CR}_j \rightarrow \mathrm{SR}_k} = \frac{
+    N^{\mathrm{\, SR}_k}_{\mathrm{\, BG}_i,~\mathrm{MC}}}{N^{\mathrm{\,
+        CR}_j}_{\mathrm{\, BG}_j \mathrm{,~MC}}}
+\end{equation}
+is the transfer factor used to extrapolate from CR$_j$ to SR$_k$. The
+normalization factors used in the normalization of the BG expectation in the SRs
+is given by:
+\begin{equation}
+  \label{eq:85}
+  \mu_{ijk} = \frac{(N_\mathrm{\, data}^{\mathrm{\, CR}_j} - N_\mathrm{\,
+      other~BG,~MC}^{\mathrm{\, CR}_j})}{N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j
+      \mathrm{,~MC}}}.
+\end{equation}
+The different normalization factors are not independent since different
+processes can enter different CRs and thus the background subtraction term,
+$N_\mathrm{\, other~BG,~MC}^{\mathrm{\, CR}_j}$, gets contributions from the
+other normalization factors. To properly treat the correlations, the
+normalization factors are obtained from a simultaneous fit of all the CRs
+referred to as the \emph{global fit}. A summary of the different processes and
+the corresponding CR used to extract the normalization factor is given in
+Table~\ref{tab:norm_factors}.
+\begin{table}[!th]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Control Region & Background Process & Normalization Factor \\
+    \midrule \midrule
+    CR$_\mathrm{\, wmn}$ & $W (\rightarrow \mu \nu),\, Z (\rightarrow \nu \bar{\nu})$ & $\mu_\mathrm{\, wmn}$ \\
+    CR$_\mathrm{\, ele}$ & $W (\rightarrow e \nu),\, W (\rightarrow \tau \nu),\,
+                           Z/\gamma^* (\rightarrow \tau^+ \tau^-)$ & $\mu_\mathrm{\, ele}$ \\
+    CR$_\mathrm{\, zmm}$ & $Z/\gamma^* (\rightarrow \mu^+ \mu^-)$ & $\mu_\mathrm{\, zmm}$ \\
+    \bottomrule
+  \end{tabular}
+  \caption{Summary table of the different background processes and the
+    corresponding control regions used to evaluate the normalization factors.}
+  \label{tab:norm_factors}
+\end{table}
+
+The global fit is performed in a background only hypothesis in all the inclusive
+signal regions (IM1--IM7) defined in Section~\ref{sec:event-selection}
+constraining $7 \times 3 = 21$ normalization factors at once. In addition a fit
+on the exclusive signal regions (EM1--EM6) in a signal plus background
+hypothesis is performed in which 3 normalization factors are fitted
+independently for each inclusive $\met$ bin.
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../search_for_DM_LED_with_ATLAS"
