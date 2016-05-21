@@ -10,7 +10,7 @@
   citecolor={red},
   urlcolor={blue}
 }
-\usepackage[latin1]{inputenc}
+\usepackage[latin1, utf8]{inputenc}
 \usepackage[T1]{fontenc}\usepackage{lmodern}
 \usepackage{layaureo}
 \usepackage{amsmath}
@@ -18,11 +18,14 @@
 \usepackage{amssymb}
 \usepackage{placeins}
 \usepackage{booktabs}
+\usepackage{newunicodechar}
 \usepackage[titletoc]{appendix}
-\usepackage[acronym]{glossaries}
+\usepackage[acronym, nomain]{glossaries}
 \usepackage[font=footnotesize]{caption}
 \usepackage[font=footnotesize]{subcaption}
 \usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+
+\DeclareUnicodeCharacter{FFFD}{?????}
 
 \makeglossaries
 
@@ -58,7 +61,7 @@
 
 \graphicspath{{images/}}
 
-\begin{document}\errorcontextlines=9
+\begin{document}
 
 \numberwithin{equation}{section}
 
@@ -110,10 +113,23 @@
 
 \input{standard_model/higgs}
 
-\section{The Hierarchy Problem and Naturalness}
+\chapter{Beyond the Standard Model}
+\label{cha:beyond-stand-model}
+
+\section{Open Questions of the Standard Model}
+\label{sec:open-quest-stand}
+
+\input{bsm/bsm_intro}
+
+\subsection{The Hierarchy Problem and Naturalness}
 \label{sec:hier-probl-natur}
 
-\input{standard_model/hier_probl_natur}
+\input{bsm/hier_probl_natur}
+
+\section{Supersymmetry}
+\label{sec:supersymmetry}
+
+\input{bsm/susy}
 
 \chapter{Experimental Apparatus}
 \label{cha:exper-appar}
@@ -356,6 +372,16 @@
 \label{sec:syst-uncert}
 
 \input{monojet_sig/systematic}
+
+\subsection{Theoretical Uncertainties}
+\label{sec:theor-uncert}
+
+\input{monojet_sig/theo_syst}
+
+\subsection{Experimental Uncertainties}
+\label{sec:exper-uncert}
+
+\input{monojet_sig/exp_syst}
 
 \section{Results}
 \label{sec:results}
