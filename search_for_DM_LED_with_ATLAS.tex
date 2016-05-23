@@ -85,28 +85,57 @@
 
 % \expandafter\ifx\csname StileTrieste\endcsname\relax \else
 \begin{citazioni}
-  \textit{Si sta,\\come d'autunno,\\sugli alberi,\\le foglie }
+  \textit{Si sta, \\
+    come d'autunno, \\
+    sugli alberi, \\
+    le foglie.}
 
   [\textsc{G.~Ungaretti}, Soldati]
 \end{citazioni}
 
 % \fi
 
-\chapter*{Introduction}
-\label{cha:intro}
-\input{introduction/intro.tex}
-
 \mainmatter
 
 \input{acronyms}
 
+\chapter{Introduction}
+\label{cha:intro}
+
+\input{introduction/intro}
+
+\section{Author's Contribution}
+\label{sec:authors-contribution}
+
+\input{introduction/contribution}
+
 \chapter{Theoretical overview}
 \label{cha:theoretical-overview}
 
-\section{The Standard Moldel of particle physics}
-\label{sec:stand-mold-part}
+\section{The Standard Model}
+\label{sec:standard-model}
 
 \input{standard_model/sm}
+
+\subsection{Electroweak Symmetry Group}
+\label{sec:electro-weak-symm}
+
+\input{standard_model/electroweak}
+
+\subsection{Electroweak Interactions}
+\label{sec:electro-weak-inter}
+
+\input{standard_model/electroweak_interaction}
+
+\paragraph{Charged Currents Interaction}
+\label{sec:charg-curr-inter}
+
+\input{standard_model/charged_currents}
+
+\paragraph{Neutral Current Interaction}
+\label{sec:neutr-curr-inter}
+
+\input{standard_model/neutral_current}
 
 \section{The Higgs mechanism}
 \label{sec:higgs-mechanism}
@@ -125,6 +154,11 @@
 \label{sec:hier-probl-natur}
 
 \input{bsm/hier_probl_natur}
+
+\subsection{Dark Matter}
+\label{sec:dark-matter}
+
+\input{bsm/dark_matter}
 
 \section{Supersymmetry}
 \label{sec:supersymmetry}
@@ -168,11 +202,6 @@
 \label{sec:forward-detectors}
 
 \input{exp_apparatus/forward}
-
-\subsection{Track reconstruction}
-\label{sec:track-reconstruction}
-
-\input{exp_apparatus/track_reco}
 
 \subsection{The Trigger System}
 \label{sec:trigger-system}
@@ -264,6 +293,11 @@
 \label{sec:primary-vertex}
 
 \input{phys_obj_reco/pv}
+
+\subsection{Track reconstruction}
+\label{sec:track-reconstruction}
+
+\input{exp_apparatus/track_reco}
 
 \subsection{Overlap Removal}
 \label{sec:overlap-removal}
