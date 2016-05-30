@@ -1,16 +1,16 @@
-\textbf{I'm not very happy with this section, will have a review!}
-TileCal is the central hadronic calorimeter of the ATLAS experiment, it is
-designed for energy reconstruction of hadrons, jets, tau particles and missing
-transverse energy. TileCal is a scintillator steel non compensated sampling
-calorimeter and it covers the region of $|\eta| < 1.7$. The scintillation light
-produced in the tiles is transmitted by wavelength shifting fibers to
-\glspl{pmt}. The analog signals from the PMTs are amplified, shaped and
-digitized by sampling the signal every 25~ns. The TileCal front end electronics
-read out the signals produced by about 10000 channels measuring energies ranging
-from 30~MeV to 2~TeV. The readout system is responsible for reconstructing the
-data in real time. The digitized signals are reconstructed with the Optimal
-Filtering algorithm, which computes for each channel the signal amplitude, time
-and quality factor at the required high rate.
+TileCal is the central hadronic calorimeter of the ATLAS experiment covering the
+$|\eta| < 1.7$ region. It is designed for energy measurement of hadrons, jets,
+tau particles and also contributes to the measurement of missing transverse
+energy (see Section~\ref{sec:miss-transv-energy}). TileCal is a scintillator
+steel non compensating sampling calorimeter, the scintillation light produced in
+the tiles is transmitted by wavelength shifting fibers to \glspl{pmt}. The
+analog signals from the PMTs are amplified, shaped and digitized by sampling the
+signal every 25~ns. The TileCal front end electronics read out the signals
+produced by about 10000 channels measuring energies ranging from 30~MeV to
+2~TeV. The readout system is responsible for reconstructing the data in real
+time. The digitized signals are reconstructed with the Optimal Filtering
+algorithm (see Section~\ref{sec:optimal-filtering}), which computes for each
+channel the signal amplitude, time and quality factor at the required high rate.
 
 TileCal is designed as one \gls{lb} and two \gls{eb}. The barrels are further
 divided, according to their geometrical position on the $z$-axis, in partitions
@@ -21,7 +21,7 @@ are shown in Figure~\ref{fig:tile_cells}.
 
 \begin{figure}[!h]
   \centering
-    \includegraphics[width=.3\linewidth]{tile_module}
+    \includegraphics[width=.5\linewidth]{tile_module}
     \caption{Cut away showing the optical read out and design of a TileCal
       module.}
     \label{fig:tile_mod}
@@ -43,14 +43,14 @@ sampling is impossible due to the dead material of the cryostat walls and the ID
 cables.
 
 TileCal is also divided in longitudinal layers, the A, BC and D layers as shown
-in Figure~\ref{fig:tile_cells}; the two innermost layers have a
+in Figure~\ref{fig:tile_cells}. The two innermost layers have a
 $\Delta \eta \times \Delta \phi$ segmentation of $0.1 \times 0.1$ while in the
 outermost, the segmentation is $0.1 \times 0.2$. Each layer is logically divided
 into \emph{cells} by grouping together in the same PMT the fibers coming from
-different scintillators belonging to the same radial depth. The gap/crack
+different scintillator tiles belonging to the same radial depth. The gap/crack
 scintillators are also called E layer cells.
 
-The energy resolution for jets of TileCal is:
+The energy resolution for jets of ATLAS is:
 \begin{equation}
   \label{eq:65}
   \frac{\sigma_E}{E} = \frac{50\%}{\sqrt{E}} \oplus 3\%
@@ -61,7 +61,7 @@ where an increase in energy resolution is expected~\cite{TileCal}.
 \begin{figure}[!h]
   \centering
     \includegraphics[width=\linewidth]{tile_cells}
-    \caption{}
+    \caption{Schematic view of the TileCal scintillator structure~\cite{TileCalPub}.}
     \label{fig:tile_cells}
 \end{figure}
 %%% Local Variables:
