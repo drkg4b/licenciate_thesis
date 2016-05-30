@@ -1,10 +1,3 @@
-\begin{figure}[!h]
-  \centering
-    \includegraphics[width=.5\linewidth]{calibration_chain}
-    \caption{The ATLAS TileCal calibration chain.}
-    \label{fig:cali_chain}
-\end{figure}
-
 The energy deposited in the calorimeter cell is proportional to the
 reconstructed amplitude. The amplitude is originally measured in ADC counts and
 needs to be converted in GeV for physics analysis using the formula:
@@ -28,7 +21,15 @@ reconstructing the signal it is possible to extract the PMTs' gain. The
 \emph{cesium} system, circulate a Cs source through each scintillating tile
 using an hydraulic system, the PMTs signal is continuously read out through an
 integrator. This system allows to adjust the EM scale and equalize the
-calorimeter cell response.
+calorimeter cell response. Figure~\ref{fig:cali_chain} depicts a schematic
+representation of the ATLAS TileCal calibration chain.
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=.6\linewidth]{calibration_chain}
+    \caption{The ATLAS TileCal calibration chain.}
+    \label{fig:cali_chain}
+\end{figure}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../search_for_DM_LED_with_ATLAS"
