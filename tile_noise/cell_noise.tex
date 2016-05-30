@@ -1,23 +1,10 @@
 In most cases, cell noise is the combination of the pulse from the PMTs
 connected to a cell (as mentioned the E layer cells are connected to only one
 PMT). The digital noise from the PMTs is added quadratically and converted in
-MeV using the calibration constants, this results in four gain combinations:
-\gls{hghg}, \gls{lglg}, \gls{lghg} and \gls{hglg}.
-
-The cell noise is used in the baseline algorithm, the \emph{topological
-  clustering} algorithm~\cite{JetCluster}, for the identification of the energy
-deposits. The algorithm assumes that the noise in all the calorimeter cells is
-normally distributed with significance (the ratio between the deposited energy
-and the parameter $\sigma$ used to describe the cell noise) expressed in units
-of Gaussian sigmas. In the algorithm, cluster of cells called
-\emph{topoclusters}, are formed by testing the energy deposit in a cell for a
-significant incompatibility with a noise only hypothesis. The algorithm starts
-by finding the \emph{seed cells} with $E > 4 \sigma$ where $\sigma$ is the
-measured RMS of the energy distribution for every cell in the pedestal run. The
-second step is to add to the seeds neighbor cells that satisfy the
-$E > 2 \sigma$ condition. Finally an additional layer of cells with $E > 0$ is
-added to the perimeter of the cluster before applying the splitting algorithm to
-separate the topoclusters based on the local energy maxima.
+MeV using the calibration constants and eq.~\eqref{eq:70}, this results in four
+gain combinations: \gls{hghg}, \gls{lglg}, \gls{lghg} and \gls{hglg}. The cell
+noise is used to identify the seed cells in the topocluster algorithm (see
+Section~\ref{sec:topocluster}).
 
 Figure~\ref{fig:non_gaussianity} shows a comparison between the cell noise and
 the fitted $\sigma$ parameter of a normal distribution. The ratio RMS / $\sigma$
@@ -57,10 +44,11 @@ R) is stored in the COOL database.
 
 \begin{figure}[!h]
   \centering
-    \includegraphics[width=.5\linewidth]{non_gaussianity}
+    \includegraphics[width=.7\linewidth]{non_gaussianity}
     \caption{Comparison between the TileCal electronic noise, measured as the
       RMS of the reconstructed amplitude distribution in pedestal runs and the
-      $\sigma$ of the Gaussian fit of the distribution for the old and new LVPS.}
+      $\sigma$ of the Gaussian fit of the distribution for the old and new
+      LVPS~\cite{TileCalNoisePub}.}
     \label{fig:non_gaussianity}
 \end{figure}
 %%% Local Variables:
