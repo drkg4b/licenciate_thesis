@@ -1,0 +1,119 @@
+- Other ways to detect dark matter?
+
+- Other motivation for SUSY (CP violation, Sakharov, GUT)
+
+- Why is important that pseudorapidity intervals are invariant:
+
+  The momentum of the parton is not known. Two partons colliding in opposite
+  directions can have any range of momentum from 0 to the sum of the momenta
+  they had so the (spread along z axis... elaborate)
+
+- What is a PV and a secondary vertex?
+
+- Give and example of homogeneous calorimeter, what are the benefits?
+
+- Why LAr has an accordion shape, why we use LAr?
+
+- Why TileCal in barrel and LAr in forward regions?
+
+- How to measure absolute luminosity?
+
+- Strenghts and weaknesses of ATLAS and CMS
+
+- Why neutrinos cannot be dark matter candidates?
+
+  Can deduct the kinematic of particles from temperature. Neturino masses are
+  small and thus they have a lot of kinetic energy (from the big bang), from
+  simulations it can be seen that the gravitational pull is not enough to bound
+  them in galaxies thus we need something heavier than neutrinos.
+
+- How can we generate so much MC events to simulate for all the data we collect?
+
+  We generate selected processes with smaller cross sections and not the whole
+  possibles pp collision outcomes.
+
+- Why some group chose a set of working points (jvt)
+
+  Its a compromise between efficiency and purity of samples. Generally more than
+  one working point is provided to accomodate the need of all the different
+  analysis.
+
+- The difference between different MC generators?
+
+  They have different hadronization models (empirical because qcd is not
+  perturbative anymore at the energy scale when quarks and gluons hadronize).
+
+- How does SCT measure the PV and secondary vertex? Is what they really do
+  directly or is done indirectly? How?
+
+- Why there is no excess in the high met at 13 TeV? Is it because at 8 TeV was
+  just a fluctuation? Is it because of the increased energy?
+
+- Why do you think you have contributed enough for a Ph.D?
+
+- What do your different models solve and not solve, with respect to the SM
+  problems you have formulated in chapter 1? How do your limits play into that?
+
+- Why do you quote neutrino masses for the flavor eigenstates?
+
+- How do you give masses to the neutrinos?
+
+- Is there more physics predicted from the ADD model? Do we expect other
+  particles?
+
+- Is the diphoton excess compatible with a graviton model? With your graviton
+  model?
+
+- Why are we even doing monophotons when monojet always provides better
+  sensitivity?
+
+- Why do the DM plots look the way they do? Eg. why do the sensitivity go to
+  zero at low wimp mass, and decrease again for high wimp masses? Do all these
+  experiments make the same assumptions?
+
+- What is an axial-vector mediator?
+
+- Does SUSY solve naturalness at the current limits?
+
+- What is naturalness good for? Seeing that it motivates most of your
+  searches. Has naturalness ever motivated a discovery before?
+
+- Can you get the proper relic density with neutralinos? With UED? With
+  gravitinos?
+
+- Is the graviton interaction really an effective interaction? The Feynman
+  diagrams don’t look that way.
+
+- What is a general-purpose detector? Can it make coffee? (Here I think the
+  answer is yes, but you would probably not want to drink it)
+
+- How do the new LVPS affect other things? Such as for example the timing?
+
+- Is the non-iterative OF a lot worse in terms of performance than the
+  iterative?
+
+- Why can you not create b or c quarks in hadronization?
+
+- Why does our 8 TeV trigger plateau earlier than the 13 TeV trigger?
+
+- How do we actually measure the efficiency of a trigger?
+
+- Why did we increase the number of jets from the 7 TeV analysis?
+
+- When is it better to use one region and not a multi-region fit?
+
+- Why do we use renorm and fact scale times 0.5 and 2 for systematics?
+
+- How do we determine how many events to generate?
+
+- The Pythia settings - are they tested on SM physics so we know what to expcect
+  for radiation?
+
+- What is the pros and cons for the two different ways of estimating the top
+  systematics?
+
+- What are the pros and cons of BLUE vs the Likelihood metod?
+
+- Your control regions in the 8 TeV analysis clearly perform worse at high
+  MET. Why should we then trust the background estimate at high MET? And do you
+  understand why you had this problem at 8 TeV and not at 13 TeV?
