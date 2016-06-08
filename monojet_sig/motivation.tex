@@ -1,3 +1,48 @@
+There are two possible cases that results in an energy imbalance in the
+detector, the first one occurs in beyond Standard Model physics, that often
+involves the presence of particles that interact weakly or not at all with
+normal matter. These particles are not detected thus leaving an energy imbalance
+in the detector. In the second case, the decay products in the final state do
+not have enough energy to be detected. To better understand this second category
+of events, consider \cref{fig:susy_standard} that shows the decay topology of
+squark pair production with a neutralino and two jets in the final state. Using
+the two body decay energy and momentum relations (see~\cite{PDG}):
+\begin{equation}
+  \label{eq:93}
+  E_q = \frac{M_{\, \tilde{q}}^2 - m_{\, \tilde{\chi}_{\, 0}^{\, 1}}^2 + m_q^2}{2
+    M_{\, \tilde{q}}},
+\end{equation}
+\begin{equation}
+  \label{eq:94}
+  |\vec{p}_q| = |\vec{p}_{\, \tilde{\chi}_{\, 0}^{\, 1}}| = \frac{\left[ \left(
+        M_{\, \tilde{q}}^2 - (m_q + m_{\, \tilde{\chi}_{\, 0}^{\, 1}})^2
+      \right) \left( M_{\, \tilde{q}}^2 - (m_q - m_{\, \tilde{\chi}_{\, 0}^{\,
+            1}})^2 \right) \right]^{1/2}}{2 M_{\, \tilde{q}}}
+\end{equation}
+where $M_{\, \tilde{q}}$ is the squark center of mass energy,
+$m_{\, \tilde{\chi}_{\, 0}^{\, 1}}$ is the neutralino mass and $m_q$ is the
+quark mass. Neglecting the quark mass ($m_q = 0$) we get that:
+\begin{equation}
+  \label{eq:95}
+  E_q = \frac{M_{\, \tilde{q}}^2 - m_{\, \tilde{\chi}_{\, 0}^{\, 1}}^2}{2 M_{\,
+      \tilde{q}}},
+\end{equation}
+\begin{equation}
+  \label{eq:96}
+  |\vec{p}_q| = |\vec{p}_{\, \tilde{\chi}_{\, 0}^{\, 1}}| = \frac{M_{\,
+      \tilde{q}}^2 - m_{\, \tilde{\chi}_{\, 0}^{\, 1}}^2}{2 M_{\, \tilde{q}}}.
+\end{equation}
+The quark will hadronize in the calorimeter and if it has enough energy can be
+reconstructed as jet. On the other hand, if the energy of the quark is below a
+given threshold it is not detected and thus results in missing energy.
+
+\mbox{}
+
+It can be seen from \cref{eq:95,eq:96} that when the mass of the neutralino
+approaches the mass of the quark this results in a low energy jet that is likely
+to
+
+
 Events with an energetic jet $\pt$ and large $\met$ in the final state, constitute a
 clean signature for new physics searches at hadron colliders. Signals that can
 be studied with this experimental signature include the production of WIMPS,
@@ -16,7 +61,7 @@ will be large leading thus to a clean signature for the monojet
 
 \mbox{}
 
-It is possible to estimate, from eq.~\eqref{eq:delta_mh}, the scale at which new
+It is possible to estimate, from eq.~\cref{eq:delta_mh}, the scale at which new
 physics is expected. Using m$_H$ = 125~GeV~\cite{PDG}, we get that
 $\Lambda \approx 1$~TeV; thus, if the naturalness criterion holds, we expect the
 two main experiments at LHC, ATLAS and CMS, to find signal for new physics at
@@ -25,14 +70,21 @@ the TeV scale.
 \begin{figure}[!h]
   \centering
   \begin{subfigure}[t]{.48\linewidth}
-    \includegraphics[width=\linewidth]{susy}
-    \caption{}
-    \label{fig:susy}
-  \end{subfigure}
+    \includegraphics[width=\linewidth]{susy_standard}
+    \caption{Event topology of squark pair production resulting in a neutralinos
+      with two jets final state~\cite{SUSYPub}.}
+    \label{fig:susy_standard}
+  \end{subfigure} \quad
   \begin{subfigure}[t]{.48\linewidth}
     \includegraphics[width=\linewidth]{compressed}
+    \caption{Event topology of squark pair production resulting in a neutralinos
+      with two jets final state with initial state radiation~\cite{ExotPub}.}
+    \label{fig:susy_compressed}
+  \end{subfigure}
+  \begin{subfigure}[t]{.7\linewidth}
+    \includegraphics[width=\linewidth]{susy}
     \caption{}
-    \label{fig:compressed}
+    \label{fig:susy_exclusion}
   \end{subfigure}
   \caption{}
   \label{fig:motivation}
