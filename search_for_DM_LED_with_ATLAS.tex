@@ -20,12 +20,15 @@
 \usepackage{booktabs}
 \usepackage{newunicodechar}
 \usepackage[titletoc]{appendix}
+\usepackage[capitalize]{cleveref}
 \usepackage[acronym, nomain]{glossaries}
 \usepackage[font=footnotesize]{caption}
 \usepackage[font=footnotesize]{subcaption}
 \usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
 
 \DeclareUnicodeCharacter{FFFD}{?????}
+
+\crefname{figure}{Figure}{Figures}
 
 \makeglossaries
 
@@ -266,20 +269,25 @@
 
 \input{tile_noise/cell_noise}
 
-\section{The 2011 ATLAS Run I Reprocessing}
-\label{sec:2011-atlas-run}
+\section{The 2011 TileCal Run I Reprocessing}
+\label{sec:2011-tilecal-run}
 
 \input{tile_noise/reprocessing}
 
-\subsection{Perfromance}
-\label{sec:perfromance}
+\subsection{Results}
+\label{sec:results-1}
 
-\input{tile_noise/performance}
+\input{tile_noise/repro_results}
 
-\subsection{Validity Checks}
-\label{sec:validity-checks}
+\section{Time Stability}
+\label{sec:time-stability}
 
-\input{tile_noise/validity}
+\input{tile_noise/time_stability}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+\input{tile_noise/tile_conclusions}
 
 \chapter{Physical Objects Reconstruction}
 \label{cha:phys-objects-reconst}
@@ -362,40 +370,43 @@
 
 \input{monojet_sig/event_selection}
 
+\section{Jet Veto }
+\label{sec:jet-veto}
+
+\input{monojet_sig/jet_veto}
+
 \section{Sources of Background}
 \label{sec:sources-background}
 
 \input{monojet_sig/background}
 
-\section{Background Estimation}
-\label{sec:backgr-estim}
-
-\input{monojet_sig/estimation_intro}
-
-\subsection{Vector Bosons }
-\label{sec:vector-bosons-}
+\section{Estimation of the $Z$ + jets and $W$ + jets backgrounds}
+\label{sec:estimation-z-+}
 
 \input{monojet_sig/wz_bg}
 
-\subsubsection{The Muon Control Region}
+\subsection{The Muon Control Region}
 \label{sec:muon-control-region}
 
 \input{monojet_sig/muon_cr}
 
-\subsubsection{The Electron Control Region}
+\subsection{The Electron Control Region}
 \label{sec:electr-contr-regi}
 
 \input{monojet_sig/electron_cr}
 
-\subsubsection{The Di-Muon Control Region}
+\subsection{The Di-Muon Control Region}
 \label{sec:di-muon-control}
 
 \input{monojet_sig/dimuon_cr}
 
-\subsubsection{The Global Simultaneous Likelihood Fit}
+\subsection{The Global Simultaneous Likelihood Fit}
 \label{sec:glob-simult-likel}
 
 \input{monojet_sig/global_fit}
+
+\section{Other Backgrounds}
+\label{sec:other-backgrounds}
 
 \subsection{The Multi-Jet Background}
 \label{sec:multi-jet-background}
@@ -427,10 +438,15 @@
 
 \input{monojet_sig/results_intro}
 
-\subsection{The Signal Hypothesis Exclusion Porcedure}
+\subsection{The Signal Hypothesis Exclusion Procedure}
 \label{sec:sign-hypoth-excl}
 
 \input{monojet_sig/exclusion_method}
+
+\subsection{Expected Limits}
+\label{sec:expected-limits}
+
+\input{monojet_sig/expected_limits}
 
 \subsection{Model Independent Limits}
 \label{sec:model-indep-limits}
@@ -450,10 +466,6 @@
 \begin{appendices}
   \chapter{Further Studies}
 
-  \section{Jet Veto }
-  \label{sec:jet-veto}
-
-  \input{monojet_sig/jet_veto}
 \end{appendices}
 
 \printglossaries
