@@ -4,8 +4,9 @@ luminosity of 3.2 \ifb. The signal region is defined by the following selection
 criteria:
 \begin{itemize}
 \item The HLT\_xe70 trigger was used in the whole 2015 dataset.
-\item In order to assure that the event originated from a $pp$ collision, a PV
-  with at least two associated tracks with $\pt > 0.4$~GeV is required.
+\item In order to assure that the event originated from a $pp$ collision, a
+  primary vertex with at least two associated tracks with $\pt > 0.4$~GeV is
+  required.
 \item Events in which any jet fails the \emph{loose} jet cleaning criteria are
   rejected. This suppress noise from non-collision background.
 \item The most energetic jet in the event (the \emph{leading jet}) must have
@@ -16,8 +17,7 @@ criteria:
   $W (\rightarrow \ell \nu)$ background, events with an identified electron of
   $\pt > 20~$GeV or muon of $\pt > 10~$GeV are rejected.
 \item In order not to overlap with other analyses, events with more than four
-  jets are rejected, see Appendix~\ref{sec:jet-veto} for more details on this
-  selection.
+  jets are rejected, see \cref{sec:jet-veto} for more details on this selection.
 \item The $\met$ trigger can acquire multi-jet events in case of a
   mis-reconstructed jet, since in these cases, usually, the missing transverse
   momentum points in the direction of one of the jets, this background can be
@@ -42,8 +42,7 @@ Table~\ref{tab:event_selection} for more details.
     \multicolumn{8}{l}{$\met > 250~$GeV} \\
     \multicolumn{8}{l}{Leading jet with $\pt > 250~$GeV and $|\eta| < 2.4$} \\
     \multicolumn{8}{l}{At most 4 jets} \\
-    \multicolumn{8}{l}{$\Delta \phi (\mathrm{jets}, \vec{p}_{\mathrm{\,
-    T}}^{\mathrm{\, miss}}) > 0.4$} \\
+    \multicolumn{8}{l}{$\Delta \phi (\mathrm{jets}, \met) > 0.4$} \\
     \multicolumn{8}{l}{Jet quality requirements} \\
     \multicolumn{8}{l}{No identified muon with $\pt > 10~$GeV or electron of
     $\pt > 20~$GeV} \\
@@ -56,7 +55,7 @@ Table~\ref{tab:event_selection} for more details.
     [500--600] & [600--700] \\
     \bottomrule
   \end{tabular}
-  \caption{Event selection criteria summary table.}
+  \caption{Definition of the signal region.}
   \label{tab:event_selection}
 \end{table}
 %%% Local Variables:
