@@ -117,3 +117,41 @@
 - Your control regions in the 8 TeV analysis clearly perform worse at high
   MET. Why should we then trust the background estimate at high MET? And do you
   understand why you had this problem at 8 TeV and not at 13 TeV?
+
+%% From Olle's PhD defence
+
+- What happens if the energy deposit is less than 2 (like 1.8 \sigma), does this
+  cell gets clustered as well?
+
+- Is there other physical correlation to noise other than the vicinity to LVPS
+  that was observed (fig 4.4)?
+
+- Do we still use the double Gaussian fit?
+
+- Why and how can I trust the trunkation methos? All the events are used during
+  the estimation and efficiency studies, how can you throw them out aftewards
+  without affecting the estimation done before?
+
+- The requirement of \met from 8 TeV to 13 TeV and also the efficiency changed,
+  was because the trigger got better?
+
+- The number of jets is an inclusive selection or an exclusie one? (do we always
+  look for less than 4 jets or we require 1 or 2 or 3 jets?)
+
+- Why was the Z \to ee region dropped in favor of the Z \to nu nu?
+
+- Why in the 13 TeV the pile up weight is not used?
+
+- Why is the \Gamma so different from m_0 in table 8.1?
+
+- Why you cut on \met and \Delta \phi exclusively, wouldn't be better cut
+  simultaneously on both? (fig. 9.2)
+
+- How do you see the evolution of this search in the next three years? What can
+  be done to improve the mesurement?
+
+- What if ATLAS finds something in a region already excluded by a direct
+  detection experiment like Ice Cube, how would you reconcile the results?
+
+- How do you tell apart all the different signals that we are probing with the
+  monojet signature in case of an excess?
