@@ -1,11 +1,11 @@
 A right handed coordinate system is defined for the ATLAS detector, the origin
-is at the nominal interaction point with the $z$--axis oriented along the beam
-direction and the $xy$ plane orthogonal to it. The positive $x$-axis starts at
-the interaction point and goes to the center of the LHC ring while the positive
-$y$-axis is defined as pointing upwards. The A-side of the detector is defined
-as that with a positive $z$-axis while the C-side has the negative $z$-axis.
+is at the geometric center of ATLAS with the $z$--axis oriented along the beam
+direction and the $xy$ plane orthogonal to it. The positive $x$-axis points to
+the center of the LHC ring while the positive $y$-axis is pointing upwards. The
+A-side of the detector is defined as that with a positive $z$-axis while the
+C-side has the negative $z$-axis.
 
-The LHC beam are unpolarized and thus invariant under rotations around the beam
+The LHC beama are unpolarized and thus invariant under rotations around the beam
 line axis, a cylindrical coordinate system is particularly convenient to
 describe the detector geometry where:
 \begin{equation}
@@ -13,16 +13,17 @@ describe the detector geometry where:
   r = \sqrt{x^2 + y^2}, \quad \phi = \arctan \frac{y}{x}.
 \end{equation}
 A momentum dependent coordinate, the \emph{rapidity}, is commonly used in
-particle physics for its invariance under Lorentz transformations. The rapidity
-is defined as:
+particle physics for its invariance under Lorentz transformations along the
+$z$--axis. The rapidity is defined as:
 \begin{equation}
   \label{eq:58}
   y = \frac{1}{2} \ln \frac{E + p_z}{E - p_z}
 \end{equation}
 where $E$ is the energy of the particle and $p_z$ its momentum along the
-$z$-axis. Rapidity intervals are Lorentz invariant. In the relativistic limit or
-when the mass of the particle is negligible, the rapidity only depends on the
-production angle of the particle with respect to the beam axis,
+$z$-axis. Rapidity intervals are Lorentz invariant under boost along the
+$z$--axis. In the relativistic limit or when the mass of the particle is
+negligible, the rapidity only depends on the production angle of the particle
+with respect to the beam axis,
 \begin{equation}
   \label{eq:59}
   \theta = \arctan \frac{\sqrt{p_x^2 + p_y^2}}{p_z}.
