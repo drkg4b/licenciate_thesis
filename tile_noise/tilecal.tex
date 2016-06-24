@@ -3,27 +3,28 @@ $|\eta| < 1.7$ region. It is designed for energy measurement of hadrons, jets,
 tau particles and also contributes to the measurement of missing transverse
 energy (see Section~\ref{sec:miss-transv-energy}). TileCal is a scintillator
 steel non compensating sampling calorimeter, the scintillation light produced in
-the tiles is transmitted by wavelength shifting fibers to \glspl{pmt}. The
-analog signals from the PMTs are amplified, shaped and digitized by sampling the
-signal every 25~ns. The TileCal front end electronics read out the signals
-produced by about 10000 channels measuring energies ranging from 30~MeV to
-2~TeV. The readout system is responsible for reconstructing the data in real
-time. The digitized signals are reconstructed with the Optimal Filtering
-algorithm (see Section~\ref{sec:optimal-filtering}), which computes for each
-channel the signal amplitude, time and quality factor at the required high rate.
+the tiles is transmitted by \glspl{wsf} to \glspl{pmt}. The analog signals from
+the PMTs are amplified, shaped and digitized by sampling the signal every
+25~ns. The TileCal front end electronics read out the signals produced by about
+10000 channels measuring energies ranging from 30~MeV to 2~TeV. The readout
+system is responsible for reconstructing the data in real time. The digitized
+signals are reconstructed with the Optimal Filtering algorithm (see
+Section~\ref{sec:optimal-filtering}), which computes for each channel the signal
+amplitude, time and quality factor at the required high rate.
 
-TileCal is designed as one \gls{lb} and two \gls{eb}. The barrels are further
-divided, according to their geometrical position on the $z$-axis, in partitions
-called EBA, LBA, EBC and LBC (see Section~\ref{sec:coordinate-system}). Each
-partition consists of 64 independent wedges (see Figure~\ref{fig:tile_mod})
-along the azimuthal direction called \emph{modules}; the LBA and EBA partitions
-are shown in Figure~\ref{fig:tile_cells}.
+TileCal is designed as one \gls{lb} covering the $|\eta| < 1.0$ range and two
+\gls{eb} in the $0.8 < |\eta| < 1.7$ range. The barrels are further divided,
+according to their geometrical position on the $z$-axis, in partitions called
+EBA, LBA, EBC and LBC (see Section~\ref{sec:coordinate-system}). Each partition
+consists of 64 independent wedges (see Figure~\ref{fig:tile_mod}) called
+\emph{modules} assembled in azhimut ($\phi$). The LBA and EBA partitions are
+shown in Figure~\ref{fig:tile_cells}.
 
 \begin{figure}[!h]
   \centering
     \includegraphics[width=.5\linewidth]{tile_module}
-    \caption{Cut away showing the optical read out and design of a TileCal
-      module.}
+    \caption{Cut away showing an individual TileCal module along with the
+      optical read out and design of a TileCal module~\cite{TileModule}.}
     \label{fig:tile_mod}
 \end{figure}
 
@@ -43,14 +44,15 @@ shower in a region where the normal sampling is impossible due to the dead
 material of the cryostat walls and the ID cables.
 
 TileCal is also divided in longitudinal layers, the A, BC and D layers as shown
-in Figure~\ref{fig:tile_cells}. The two innermost layers have a
+in \cref{fig:tile_cells}. The two innermost layers have a
 $\Delta \eta \times \Delta \phi$ segmentation of $0.1 \times 0.1$ while in the
 outermost, the segmentation is $0.1 \times 0.2$. Each layer is logically divided
-into \emph{cells} by grouping together in the same PMT the fibers coming from
-different scintillator tiles belonging to the same radial depth. The gap/crack
-scintillators are also called E layer cells.
+into \emph{cells} (also shown in \cref{fig:tile_cells}) by grouping together in
+the same PMT the fibers coming from different scintillator tiles belonging to
+the same radial depth. The gap/crack scintillators are also called E layer
+cells.
 
-The energy resolution for jets of ATLAS is:
+The energy resolution for jets in ATLAS is:
 \begin{equation}
   \label{eq:65}
   \frac{\sigma_E}{E} = \frac{50\%}{\sqrt{E}} \oplus 3\%
@@ -61,7 +63,8 @@ where an increase in energy resolution is expected~\cite{TileCal}.
 \begin{figure}[!h]
   \centering
     \includegraphics[width=\linewidth]{tile_cells}
-    \caption{Schematic view of the TileCal scintillator structure~\cite{TileCalPub}.}
+    \caption{Schematic view of the TileCal layer and cell structure in a plane
+      containing the beam axis $z$~\cite{TileCalPub}.}
     \label{fig:tile_cells}
 \end{figure}
 %%% Local Variables:
