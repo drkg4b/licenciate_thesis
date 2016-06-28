@@ -1,16 +1,20 @@
 Excluding the E layer cells that are connected only to one PMT, the cell noise
 is the combination of the two readout channels of a cell where the digital noise
 from the PMTs is added quadratically and converted in MeV using the calibration
-constants and eq.~\eqref{eq:70}. This combination results in four possible gain
-combinations: \gls{hghg}, \gls{lglg}, \gls{lghg} and \gls{hglg}. The cell noise
-is used to identify the seed cells in the topocluster algorithm (see
+constants and eq.~\eqref{eq:70}. There are four possible gain combinations:
+\gls{hghg}, \gls{lglg}, \gls{lghg} and \gls{hglg}. When the energy deposit is
+large, the two channels belonging to the cell are readout in low gain thus
+giving rise to the LGLG combination, for small signals the HGHG combination is
+used. It can also occur that for energy deposits in the intermediate range, one
+PMT is readout in LG and the other in HG resulting in a HGLG combination. The
+cell noise is used to identify the seed cells in the topocluster algorithm (see
 Section~\ref{sec:topocluster}).
 
 Figure~\ref{fig:non_gaussianity} shows a comparison between the cell noise and
 the fitted $\sigma$ parameter of a normal distribution. The ratio RMS / $\sigma$
 = 1 indicates a perfect agreement between the measured and the fitted amplitude
 distribution for a single Gaussian hypothesis. The blue square in the plot
-indicate the comparison for an old model of \glspl{lvps} while the red square
+indicate the comparison for an old model of \gls{lvps} while the red square
 refers to the currently used LVPSs. It can be seen that with the old model of
 \glspl{lvps} the ratio RMS / $\sigma$ can be large indicating a non Gaussian
 behavior of the electronic noise. For this reason a double Gaussian distribution
