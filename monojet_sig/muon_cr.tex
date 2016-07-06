@@ -1,10 +1,11 @@
-The $\wmunuplusjets$ events can pass the SR selection in case the muon is
-outside the detector acceptance or it fails quality criteria. This region
-(CR$_\mathrm{\, wmn}$) thus selects $\wmunuplusjets$ events in order to estimate
-the $\znunuplusjets$ contribution in the signal region. The muon is treated like
-a neutrino in the $\met$ calculation, in this way the $W$ boson $\pt$ in this CR
-is close to the $Z$ boson $\pt$ in $\znunuplusjets$ events in the SR\@. The
-C$_{\mathrm{\, wmn}}$ region selects events with:
+The $\wmunuplusjets$ events can enter the SR if the muon is outside the detector
+acceptance or it fails quality criteria. The muon control region
+(CR$_\mathrm{\, wmn}$) selects $\wmunuplusjets$ events in order to estimate the
+$\znunuplusjets$ contribution in the signal region. The muon is treated like a
+neutrino in the $\met$ calculation, in this way the $\met$ is a measurement of
+the $W$ momentum which is later translated in the $Z$ boson momentum to estimate
+the $\znunuplusjets$ background. The CR$_{\mathrm{\, wmn}}$ region selects
+events with:
 \begin{itemize}
 \item Exactly one good muon.
 \item The transverse mass, defined as:
@@ -13,13 +14,15 @@ C$_{\mathrm{\, wmn}}$ region selects events with:
     m_\mathrm{\, T} = \sqrt{2 p_\mathrm{\, T}^{\, \mu} p_\mathrm{\, T}^{\, \nu}
       (1 - \cos(\phi_\mu - \phi_\nu))}
   \end{equation}
-  and determined by the muon and neutrino $\pt$, is constrained in the
-  $W$ boson mass window $30 < m_\mathrm{\, T} < 100$~GeV.
+  and determined by the muon ($\pt^{\, \mu}$) and neutrino ($\pt^{\, \nu}$)
+  $\pt$, is required to be $30~<~m_\mathrm{\, T}~<~100$~GeV, consistent with $W$
+  boson production.
 \end{itemize}
 The transverse mass cut suppress the $\wtaunuplusjets$ processes in this
-region. The measured $\met$ and leading jet $\pt$ distributions after the fit
-procedure described in Section~\ref{sec:glob-simult-likel} are shown in
-Figure~\ref{fig:muon_cr_plots}. The agreement between data and MC is good.
+region. The measured $\met$ and leading jet $\pt$ distributions after the
+fitting the background normalizations to the control regions (see
+\cref{sec:glob-simult-likel}) are shown in Figure~\ref{fig:muon_cr_plots}. The
+agreement between data and MC is good.
 
 \begin{figure}[!h]
   \centering
@@ -33,9 +36,9 @@ Figure~\ref{fig:muon_cr_plots}. The agreement between data and MC is good.
     \caption{Leading jet $\pt$ distribution.}
     \label{fig:muon_cr_jet1_pt_pre_fit}
   \end{subfigure}
-  \caption{Measured $\met$ and leading jet $\pt$ after fit distribution in the
-    single muon CR for the $\met > 250~$GeV selection. The error bands include
-    the statistical and systematic error.}
+  \caption{Observed and predicted $\met$ and leading jet $\pt$ distributions
+    after the background only fit in the single muon CR for the $\met > 250~$GeV
+    selection. The error bands include the statistical and systematic error.}
   \label{fig:muon_cr_plots}
 \end{figure}
 %%% Local Variables:
