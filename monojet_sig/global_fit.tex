@@ -14,17 +14,19 @@ given by:
 \begin{equation}
   \label{eq:83}
   N_{\mathrm{\, BG}_i}^{\mathrm{\, SR}_k} = \frac{(N_\mathrm{\,
-      data}^{\mathrm{\, CR}_j} - N_\mathrm{\, other~BG,~MC}^{\mathrm{\,
-        CR}_j})}{N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j \mathrm{,~MC}}} \times
+      data}^{\mathrm{\, CR}_j} - N_{\mathrm{\,
+        non~BG}_i,~\mathrm{MC}}^{\mathrm{\, CR}_j})}
+  {N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_i \mathrm{,~MC}}} \times
   N^{\mathrm{\, SR}_k}_{\mathrm{\, BG}_i,~\mathrm{MC}}
 \end{equation}
-where $N_{\mathrm{\, BG}_i}^{\mathrm{\, SR}_k}$ is the predicted number of the
-background $i$ events in the $k$ signal region,
+where $N_{\mathrm{\, BG}_i}^{\mathrm{\, SR}_k}$ is the predicted number events
+for background $i$ events in the signal region SR$_k$,
 $N_\mathrm{\, data}^{\mathrm{\, CR}_j}$ is the observed number of events in the
-$j$ control region, $N_\mathrm{\, other~BG,~MC}^{\mathrm{\, CR}_j}$ is the MC
-estimate of the background contamination coming from other processes in the
-given control region, $N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j \mathrm{,~MC}}$ is
-the MC prediction of the $j$ background in the $j$ control region and
+control region $j$, $N_{\mathrm{\, non~BG}_i,~\mathrm{MC}}^{\mathrm{\, CR}_j}$
+is the estimated number of the background contamination coming from other
+processes in the given control region,
+$N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j \mathrm{,~MC}}$ is the MC prediction of
+the $j$ background in the $j$ control region and
 $N^{\mathrm{\, SR}_k}_{\mathrm{\, BG}_i,~\mathrm{MC}}$ is the number of the $i$
 background events predicted in MC simulation in the signal region. The ratio:
 \begin{equation}
@@ -38,12 +40,12 @@ normalization factors used in the normalization of the BG expectation in the SRs
 is given by:
 \begin{equation}
   \label{eq:85}
-  \mu_{ijk} = \frac{(N_\mathrm{\, data}^{\mathrm{\, CR}_j} - N_\mathrm{\,
-      other~BG,~MC}^{\mathrm{\, CR}_j})}{N^{\mathrm{\, CR}_j}_{\mathrm{\, BG}_j
-      \mathrm{,~MC}}}.
+  \mu_{ijk} = \frac{(N_\mathrm{\, data}^{\mathrm{\, CR}_j} - N_{\mathrm{\,
+        non~BG}_i,~\mathrm{MC}}^{\mathrm{\, CR}_j})}{N^{\mathrm{\,
+        CR}_j}_{\mathrm{\, BG}_k \mathrm{,~MC}}}.
 \end{equation}
 The different normalization factors are not independent since different
-processes can enter different CRs and thus the background subtraction term,
+processes can enter several CRs and thus the background subtraction term,
 $N_\mathrm{\, other~BG,~MC}^{\mathrm{\, CR}_j}$, gets contributions from the
 other normalization factors. To properly treat the correlations, the
 normalization factors are obtained from a simultaneous fit of all the CRs
@@ -67,12 +69,16 @@ Table~\ref{tab:norm_factors}.
   \label{tab:norm_factors}
 \end{table}
 
-The global fit is performed in a background only hypothesis in all the inclusive
-signal regions (IM1--IM7) defined in Section~\ref{sec:event-selection}
-constraining $7 \times 3 = 21$ normalization factors at once. In addition a fit
-on the exclusive signal regions (EM1--EM6) in a signal plus background
-hypothesis is performed in which 3 normalization factors are fitted
-independently for each inclusive $\met$ bin.
+The global fit can be performed in two different ways:
+\begin{enumerate}
+\item The background only hypothesis, fits only the control regions in order to
+  predict the background in the signal region. This fit is used to set model
+  independent limits.
+\item The signal plus background hypothesis, fits both the signal and control
+  regions with a sum of background and specific signal. The normalization of the
+  specific BSM signal is a free parameter. This fit is used to exclude specific
+  models.
+\end{enumerate}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../search_for_DM_LED_with_ATLAS"
