@@ -8,7 +8,7 @@ the noise must be checked and understood.
 
 The different TileCal subsystems (laser, CIS, etc.) all use a common software
 framework, \gls{tucs}, to perform validity checks on a number of different
-studies. To test the stability over time of the updated noise constants, a set
+studies. To study the stability over time of the updated noise constants, a set
 of python scripts was developed by the author of this thesis to expand the TUCS
 functionality. These scripts connect to the ATLAS condition database and allow
 to visually display the relative change of the cell noise and digital noise
@@ -59,12 +59,14 @@ quantities.
   \label{fig:jumps}
 \end{figure}
 
-This problem was investigated by re--performing the pedestal noise fit manually
-and recalculating the noise constants focusing on two specific IOVs,
-$[183110, 183382[$ (before the jump) and $[183382, 183515[$ (after the
-jump). Some calorimeter cells without jump were used to validate the noise
-constants calculated with the fit and checked against the values stored in COOL
-from automated fits performed by the standard ATLAS software.
+This problem was investigated by re--performing the pedestal noise
+fit\footnote{The standard calibration relies on automated fits performed by the
+  ATLAS reconstruction. It was suspected at first that some of these fits were
+  failing} manually and recalculating the noise constants focusing on two
+specific IOVs, $[183110, 183382[$ (before the jump) and $[183382, 183515[$
+(after the jump). Some calorimeter cells without jump were used to validate the
+noise constants calculated with the fit and checked against the values stored in
+COOL from automated fits performed by the standard ATLAS software.
 
 \cref{fig:no_jump_fit} shows the control cell energy distribution with the
 double Gaussian fit superimposed for two runs where the jump was present in
@@ -118,7 +120,7 @@ both reported in \cref{tab:no_jump_fit}, are in good agreement.
   \label{fig:no_jump_fit}
 \end{figure}
 
-Moving to the investigation of a cell which exhibit the jump in the time
+Moving to the investigation of a cell which exhibits the jump in the time
 evolution the seventh cell of the BC layer (BC7) on the C side of the LB
 partition of the 41st module (LBC 41) was selected for illustration purposes.
 Figure~\ref{fig:jump_fit} shows the energy distribution with the double Gaussian
@@ -160,7 +162,7 @@ Also in this case, the noise constants from the fit, are in agreement with those
 stored in the COOL database. From this study it was concluded that bad fits
 inside the automated ATLAS pedestal and noise reconstruction were not the cause
 of the jumps. However, the $\chi^2$ of the distribution imply that the double
-Gaussian model is not a good model in this case.
+Gaussian model is not a good model for the second type of cells.
 \begin{figure}[!h]
   \centering
   \begin{subfigure}[t]{.8\linewidth}
@@ -184,7 +186,7 @@ After further investigations it was discovered that this behavior is caused by
 the \gls{tnf}. The electronic noise in nearby channels can be correlated. The
 version of low voltage power supplies that were used during the 2011 data taking
 lead to significant coherent noise among several channels, particularly those
-close to the power supply, see \cref{fig:non_gaussianity}. Coherent noise means
+close to the power supply (see \cref{fig:non_gaussianity}). Coherent noise means
 that the signal in several cells can vary coherently and can thus alter the jet
 and missing transverse energy reconstruction. In order to remedy this a Tile
 Noise Filter was employed. The TNF calculates for each motherboard the pedestal
@@ -197,7 +199,9 @@ where the index $i$ runs over all the channels belonging to a certain
 motherboard, $d_i$ is the $i$--th channel amplitude in ADC counts and $N$ is the
 number of channels. Variations in this average baseline can be regarded as an
 estimation of the coherent noise and is subtracted from the channel data of each
-channel ($d_i - d$) on an event--by--event basis.
+channel ($d_i - d$) on an event--by--event basis. In order to be able to perform
+this noise filter calculation only channels without signal from physics are
+taken into account in the sum of \cref{eq:92}.
 
 The cell noise was recalculated without noise filter and the corresponding
 distribution re-fitted. \cref{fig:no_filter_fit} show the double Gaussian fit
