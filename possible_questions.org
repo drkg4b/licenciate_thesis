@@ -92,6 +92,43 @@
 - Is the diphoton excess compatible with a graviton model? With your graviton
   model?
 
+- In the CR fit is the agreement between data and MC good also before fit? Why
+  don't we rely directly on the MC cross sections?
+
+- Why don't we use pure theoretical cross section but need the data driven
+  method? What are the limitations of the different MC generators? Why aren't
+  they perfect or good enough?
+
+- What is the order of the V + jets simulation, LO, NLO? Up to how many partons?
+
+- Why do we chose this normalization scheme for the transfer factors?
+
+- How is the jet response function derived?
+
+- Why the inverted \delta \phi min cut can make a multi--jet control region?
+
+- How are we sure that the events selected in the way described in the NCB
+  section come from BIB?
+
+- What is the jet energy scale and how the resolution contributes to the
+  systematic uncertainties?
+
+- How is the luminosity actually measured and calculated?
+
+- Why are the expected limits getting a bit worse for higher mass gaps (25 GeV)?
+
+- What is a prompt electron?
+
+- Is the same likelihood used for all electrons eta and ET but with different
+  cuts in different eta and ET or are you actually using a different likelihood
+  function in the different bins? It seems to me the later would be better.
+
+- What is a local track segment?
+
+- How is the pile--up correction for jets performed?
+
+- How do you classify the energy deposits as electromagnetic or hadronic?
+
 - Why are we even doing monophotons when monojet always provides better
   sensitivity?
 
