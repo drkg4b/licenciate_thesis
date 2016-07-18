@@ -129,6 +129,10 @@
 
 - How do you classify the energy deposits as electromagnetic or hadronic?
 
+- How is the tight criterion for jets defined?
+
+- Why most systematic uncertainties cancel out with the data driven method?
+
 - Why are we even doing monophotons when monojet always provides better
   sensitivity?
 
